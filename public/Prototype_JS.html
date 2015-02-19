@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geocode Tests</title>
+    <meta charset="utf-8">
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script src="/assets/address.js?body=1" data-turbolinks-track="true"></script>
+    <script src="/assets/githubmates.js?body=1" data-turbolinks-track="true"></script>
+    <script src="/js/page-repo-details.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <!-- Require Javascript to be enabled -->
+      <h1>Javascript is disabled</h1>
+      <p>
+        This site use Javascript to handle interaction with capabilities of your browser.
+        The engine is normally activated in any browser, but it's not the case for you.
+        Please, activate your javascript engine in the browser's settings or
+        ask your administrator to unlock it. Notice that majority of HTML5 modern web sites
+        performs interactions that require Javascript to be enabled, like it's the case here.
+      </p>
+    </noscript>
+    <script>
+      'use strict'
+      // Require DOM Level 2 compliant browser :
+      if (!window.addEventListener) {
+        window.document.body.innerHTML = [
+          '<h1>Browser too old</h1>',
+          '<p>Your browser is too old. Please, update it or use a more recent version.<br /><br />',
+          'If you use Internet Explorer, <a href="http://windows.microsoft.com/fr-fr/internet-explorer/download-ie" ',
+          'target="_blank">follow the steps from the editor</a>.<br />',
+          'For Windows XP users, your are greatly encouraged to use alternative like',
+          '<a href="http://www.mozilla.com/firefox" target="_blank">Firefox</a> or',
+          '<a href="https://www.google.fr/chrome/browser/" target="_blank">Chrome</a> browsers.<br/>',
+          'For Mac OS X user, please, update your version of',
+          '<a href="http://support.apple.com/kb/HT6104" target="_blank">Safari</a></p>'
+        ].join('\n')
+      } else {
+        window.addEventListener('DOMContentLoaded',function(){
+          if (typeof pagejs == 'undefined') console.log('pagejs is mandatory for any interaction')
+          else pagejs.repodetails.refresh_page('ludovicdeluna/chartkick')          
+        })
+      }
+    </script>
+  </body>
+</html>

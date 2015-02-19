@@ -1,0 +1,23 @@
+default: &default
+  adapter : mysql2
+  encoding: utf8
+  database: github_mates
+  pool    : 11
+  socket  : /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  username: github_mates
+  password: devpass
+  
+
+test:
+  <<: *default
+  database: github_mates_test
+  username: github_mates
+  password: devpass
+
+production:
+  <<: *default
+  username: username
+  password: password

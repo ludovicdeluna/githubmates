@@ -1,0 +1,3 @@
+== GitHub Mates
+
+A simple toy for play with Github API. Initial request from a Company for challanging newcommers... A joke :)

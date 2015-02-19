@@ -1,0 +1,14 @@
+defaults: &defaults
+  github_key: "ludovicdeluna:Rostand95IS"
+  google_key: "APIKey"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  github_key: "username:password"
+  google_key: "APIKey"
